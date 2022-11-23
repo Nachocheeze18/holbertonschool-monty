@@ -9,7 +9,6 @@
 
 int main(int argcount, char *argcont[])
 {
-
 FILE file;
 char *buffer, *buff, *spaced;
 char check[4];
