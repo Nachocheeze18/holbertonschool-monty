@@ -1,9 +1,30 @@
+#ifndef montyh
+#define montyh
+#undef montyh
+
 /**
  * Includes
  */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
+
+/**
+ * struct check
+ * @check1: var
+ *@check2: var
+ *
+ * Description: token struct
+ */
+typedef struct checker
+{
+char *check1;
+char *check2;
+FILE *file;
+} checker;
+
+extern checker *c;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -40,5 +61,14 @@ void (*f)(stack_t **stack, unsigned int line_number);
  */
 
 int main(int argcount, char* argcont[]);
-void push(stack_t stack, int i);
-void pall(stack_t stack, int i);
+void push(stack_t **stack, unsigned int i);
+void pall(stack_t **stack, unsigned int i);
+void pint(stack_t **stack, unsigned int i);
+void pop(stack_t **stack, unsigned int i);
+void swap(stack_t **stack, unsigned int i);
+void add(stack_t **stack, unsigned int i);
+void nop(stack_t **stack, unsigned int i);
+void freemem(stack_t **stack);
+void other(unsigned int linecount, char *ch, stack_t **stack);
+
+#endif
