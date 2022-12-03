@@ -1,12 +1,6 @@
 #include "monty.h"
 
 /**
- * Global Var
- */
-
-checker *c;
-
-/**
  * push - push element
  * @stack: stack
  * @i: line num
