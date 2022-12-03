@@ -1,10 +1,8 @@
 #include "monty.h"
 
-checker *c;
-
 /**
  * other - function
- *@op: struct
+ * @op: struct
  * @linecount: var
  * @ch: var
  * @stack: var
@@ -13,7 +11,6 @@ checker *c;
 
 void other(unsigned int linecount, char *ch, stack_t **stack)
 {
-
 instruction_t op[] = {{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}};
 
 if (strstr("push", ch))
