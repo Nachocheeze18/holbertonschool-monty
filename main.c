@@ -1,6 +1,10 @@
 #include "monty.h"
 
-char *check2;
+/**
+ * Global Var
+ */
+
+checker *c;
 
 /**
  * main - Main Function
@@ -12,51 +16,44 @@ char *check2;
 int main(int argcount, char *argcont[])
 {
 
-FILE *file;
-char *buffer, *buff;
-char *check;
+char *buff;
 size_t size;
 const char del[] = " \t\n";
-unsigned int i;
 int linecount = 0;
-stack_t **stack = NULL;
-instruction_t op[] = {{"push", push}, {"pall", pall}};
+stack_t *stack = NULL;
+
+c = malloc(sizeof(checker));
+buff = malloc(sizeof(char *));
+
+c->file = NULL;
 
 if (argcount != 2)
 {
 fprintf(stderr, "USAGE: monty file\n");
 exit(EXIT_FAILURE);
 }
-file = fopen(argcont[1], "r");
-if(file == NULL)
+c->file = fopen(argcont[1], "r");
+if(c->file == NULL)
 {
-fprintf(stderr, "ERROR: no file");
+fprintf(stderr, "Error: Can't open file %s\n", argcont[1]);
+fclose(c->file);
+free(c->file);
 exit(EXIT_FAILURE);
 }
-buffer = malloc(sizeof(char) * 2);
-if (buffer == NULL)
-{
-fprintf(stderr, "ERROR: memory failure");
-exit(EXIT_FAILURE);
-}
-while(getline(&buff, &size, file) != -1)
+
+while(getline(&buff, &size, c->file) != -1)
 {
 
-check = strtok(buff, del);
-check2 = strtok(NULL, del);
+c->check1 = strtok(buff, del);
+c->check2 = strtok(NULL, del);
 linecount++;
 
+other(linecount, c->check1, &stack);
 }
 
-for (i = 0; i < 2; i++)
-{
-
-if (strcmp(op[i].opcode, check) == 0)
-{
-op[i].f(stack, linecount);
-}
-}
-
-fclose(file);
+free(buff);	
+fclose(c->file);
+free(c);
+freemem(&stack);
 return (0);
 }
