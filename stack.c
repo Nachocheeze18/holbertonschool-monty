@@ -50,3 +50,4 @@ fprintf(stderr, "L%d: unknown instruction %s\n", linecount, ch);
 exit(1);
 return;
 }
+}
