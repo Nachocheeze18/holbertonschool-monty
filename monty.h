@@ -14,7 +14,6 @@
  * struct check
  * @check1: var
  *@check2: var
- *
  * Description: token struct
  */
 typedef struct checker
@@ -31,7 +30,6 @@ extern checker *c;
  * @n: integer
  * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
- *
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO
  */
@@ -57,10 +55,14 @@ void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 /**
- * Prototypes
+ * Prototypes - functions
+ * main - main function
+ * @argcount: how many args
+ * @argcont: contents of arg
+ * Return: 0
  */
 
-int main(int argcount, char* argcont[]);
+int main(int argcount, char* argcont[foo *bar]);
 void push(stack_t **stack, unsigned int i);
 void pall(stack_t **stack, unsigned int i);
 void pint(stack_t **stack, unsigned int i);
