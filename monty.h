@@ -57,7 +57,6 @@ void (*f)(stack_t **stack, unsigned int line_number);
  * Prototypes
  */
 
-int main(int argcount, char* argcont[]);
 void push(stack_t **stack, unsigned int i);
 void pall(stack_t **stack, unsigned int i);
 void pint(stack_t **stack, unsigned int i);
