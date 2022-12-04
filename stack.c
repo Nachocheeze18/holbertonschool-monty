@@ -12,8 +12,7 @@
 void other(unsigned int linecount, char *ch, stack_t **stack)
 {
 
-instruction_t op[] = {{"push", push}, {"pall", pall}, {"pint", pint},
-{"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}};
+instruction_t op[] = {{"push", push}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap}, {"add", add}, {"nop", nop}};
 
 if (strstr("push", ch))
 {
