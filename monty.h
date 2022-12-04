@@ -1,3 +1,7 @@
+#ifndef montyh
+#define montyh
+#undef montyh
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -53,7 +57,7 @@ void (*f)(stack_t **stack, unsigned int line_number);
  * @argcont: contents of arg
  */
 
-int main(int argcount, char* argcont[]);
+int main(int argcount, char* argcont);
 void push(stack_t **stack, unsigned int i);
 void pall(stack_t **stack, unsigned int i);
 void pint(stack_t **stack, unsigned int i);
@@ -63,3 +67,5 @@ void add(stack_t **stack, unsigned int i);
 void nop(stack_t **stack, unsigned int i);
 void freemem(stack_t **stack);
 void other(unsigned int linecount, char *ch, stack_t **stack);
+
+#endif
