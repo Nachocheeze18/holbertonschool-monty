@@ -1,6 +1,12 @@
 #include "monty.h"
 
 /**
+ * Global Var
+ */
+
+checker *c;
+
+/**
  * main - Main Function
  * @argcount: how many args
  * @argcont: contents of arg

@@ -1,5 +1,7 @@
 #include "monty.h"
 
+checker *c;
+
 /**
  * other - function
  * @op: struct
