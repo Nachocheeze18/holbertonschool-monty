@@ -1,11 +1,3 @@
-#ifndef montyh
-#define montyh
-#undef montyh
-
-/**
- * Includes
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -71,5 +63,3 @@ void add(stack_t **stack, unsigned int i);
 void nop(stack_t **stack, unsigned int i);
 void freemem(stack_t **stack);
 void other(unsigned int linecount, char *ch, stack_t **stack);
-
-#endif
