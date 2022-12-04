@@ -59,7 +59,6 @@ void (*f)(stack_t **stack, unsigned int line_number);
  * main - main function
  * @argcount: how many args
  * @argcont: contents of arg
- * Return: 0
  */
 
 int main(int argcount, char* argcont[]);
